@@ -126,8 +126,61 @@ néhány százalékos különbség van.
     \caption{A kvantum méréséhez használz nagyítás.}
 \end{figure}
 \subsubsection*{Átvitel}
+A bemeneti feszültséget változtatva a következő adatokat mértük:
+\begin{table}[H]
+    \begin{tabular}{|r|r|r|}
+        \hline
+        Bemenő feszültség$(V)$ & Pufferen kijelzett bináris szám & Kijelzett szám \\
+        \hline
+        0.00 & 00000111 & 7 \\
+        \hline
+        0.20 & 00011000 & 24 \\
+        \hline
+        0.40 & 00101101 & 45 \\
+        \hline
+        0.61 & 01000010 & 66 \\
+        \hline
+        0.82 & 01011000 & 88 \\
+        \hline
+        1.01 & 01101011 & 107 \\
+        \hline
+        1.20 & 01111110 & 126 \\
+        \hline
+        1.42 & 10010101 & 149 \\
+        \hline
+        1.60 & 10100111 & 167 \\
+        \hline
+        1.79 & 10111011 & 187 \\
+        \hline
+        2.01 & 11010001 & 209 \\
+        \hline
+        2.21 & 11100101 & 229 \\
+        \hline
+        2.42 & 11111010 & 250 \\
+        \hline
+    \end{tabular}
+\end{table}
+A fenti táblázatban az összes feszültségérték hibája $\pm0.005V$, amely az egyenáramú tápegységtől származik.
+Látható, hogy 0$V$ érték mellet a rendszer nem 0-t hanem 7-et ír ki, ez vagy azért van, mert ekkor mégsem 0$V$ a betáplált feszültség, vagy azért, mert az átalakító minimális 
+feszültsége nem $0V$, hanem egy kicsivel 0$V$ alatti érték. A fent táblázat adatait megjelenítve a következő ábrát kapjuk:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{./Atadas.png}
+    \caption{A fenti táblázat adatainak megjelenítése.}
+\end{figure}
+Ha ezekre az adatokra egy $ax+b$ alakú lineáris függvényt illesztünk a következő érttékeket kapjuk a paraméterekre: $a=101.4\pm0.3$, és $b=4.88\pm0.43$, tehát a feszültség, és a 
+kijelzett szám közötti összefüggés a következő:
+\begin{equation*}
+    n=101.4U_{be}+4.88
+\end{equation*}
+Ahol n a kijelzett szám értéke. Ennek az elméleti esetben a következőnek kéne lennie: $n=100U_{be}$, valamint a rendszer paramétereinek mért értékeiből $n=101.9U_{be}$ adódna. 
+láthatjuk, hogy mindkettő közel áll au illesztésből kapott eredményhez, az elméletileg elvárt eredménytől a legnagyobb hibája a kapott eredménynek az összefüggésben lévő konstans tagból ered, 
+ami miatt a digitális feszültségmérőnek lesz egy szisztematikus hibája.
 
 \section*{Összegzés}
+A mérés során sikeresen meg lehetett állapítani a jelek vizsgálata segítségével az áramkör működését, valamint az ezt követő mérések során 
+kapott összefüggések is mutatják, hogy az elméletileg feltételezett összefüggések jó közelítéssel helyesnek bizonyultak, ám a függvényillesztés során észervehető lett, 
+hogy a rendszernek van egy szisztematikus hibája, amely miatt nagyjából 0.05$V$-al nagyobb értéket jelez ki, mint amit valójában betáplálunk a rendszerbe, mint mérendő feszültség.
 
 %% IRODALOMJEGYZÉK
 %\begin{thebibliography}{9}
