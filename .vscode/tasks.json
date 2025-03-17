@@ -5,8 +5,13 @@
     "tasks": [
         {
             "label": "pdflatex",
-            "type": "shell",
-            "command": "pdflatex --output-directory=c:/Users/kutykurutty/Desktop/123/Alapmeresek/${relativeFileDirname} c:/Users/kutykurutty/Desktop/123/Alapmeresek/${relativeFileDirname}/${fileBasename}",
+            "type": "process",
+            "command": "pdflatex",
+            "args": [
+                "--output-directory=${fileDirname}",
+                "${file}"
+            ],
+            //"command": "pdflatex --output-directory=c:/Users/kutykurutty/Desktop/123/Alapmeresek/${relativeFileDirname} c:/Users/kutykurutty/Desktop/123/Alapmeresek/${relativeFileDirname}/${fileBasename}",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
