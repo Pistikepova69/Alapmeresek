@@ -1,0 +1,251 @@
+\documentclass[10pt,pdftex]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage[a4paper]{geometry}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{spverbatim}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{adjustbox}
+    \definecolor{titlebg}{RGB}{128,128,128}
+
+\usepackage{lmodern}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+
+\title{Állohullámok kötélen}
+
+%% EZ ALÁBBI KÉT MEZŐT ÉRTELEMSZERŰEN KI KELL TÖLTENI
+\author{Bíró Gergő Tamás}
+\date{2025. április 8.}
+
+
+%% FEJLÉC LEÍRÓ, NEM KELL MÓDOSÍTANI
+\renewcommand*{\maketitle}{\noindent{%
+\parbox{\dimexpr\linewidth-2\fboxsep}{\color{black}%
+\parbox{\linewidth}{\fontsize{18}{24}\selectfont\sffamily\bfseries\thetitle}%
+}}\vskip 1em%
+\begin{tabular}{l}%
+Mérést végezte: \theauthor \\%
+Mérés dátuma: \thedate\\
+Jegyzőkönyv végleges változata: \today \\%
+Jegyzőkönyv leadásának időpontja: 2025. április 15.
+\end{tabular}%
+}
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\section*{Mérés célja}
+A méréssel a kötélen terjedő állóhullámok különböző módusaihoz frekvenciáit akarjuk megmérni, a kapott adatokból igazolni akarjuk a húron trejedő állóhullám módusaihoz terjedő frekvenciák arányára vonatkozó képletet akarjuk igazolni, valamint  a hullám terjedési sebességét is kiszámítjuk az egyes $n$\footnotemark módusokhoz, és összevetjök egymással a két eredményt. Ezután egy másik kötélen az $n=3$ módushoz tartozó frekvenciákat mérjük, amelyek segítségével meg akarjuk határozni a kötél lineáris sűrűségét, amelyet összehasonlítunk a referencia kötél adataiból kiszámolt lineáris sűrűséggel.
+\footnotetext{$n$ a kötélen elhelyezkedő félhullámhosszok száma.}
+\section*{Mérőeszközök}
+\begin{itemize}
+    \item{Szinusz hullám generátor}
+    \item{Vékony és vastag kötél}
+    \item{Vibrátor}
+    \item{Mérőszalag}
+    \item{Csiga}
+    \item{Súlyok}
+\end{itemize}
+\section*{A mérés leírása}
+Elsőként a vastag kötél egyik négét a vibrátorhoz erősítjük, a másikat a csigán átvezetjük, és arra $90g$ tömegű súlyt akasztunk. Ekkor megmérjük a kötél a csiga és a vibrátor között elhelyezkedő részének hosszát, amelyen a hullám terjedni fog. Ezután a szinuszhullámgenerátor bekapcsoljuk, a frekvenciáját minimálisra állítjuk. A frekvenciát addig növeljük, amníg az nem fog megegyezni az $n=2$ módushoz tartozó frekvenciával. Ezt a frekvenciát lejegyezzük, majd kis mértékben kitérítjük, amíg már jól láthatóan a kötélen már nem állóhullám fog terjedni, ezt a frekvenciaeltérést fogjuk tekinteni a mért frekvencia hibájának. Ezután a frekvenciát tovább nüveljük, amíg a kötélen nem lesz jól látható az $n=3$ módushoz tartozó két csomópontot tartalmazó állóhullám, itt is ez előző esethez hasonlóan rögzítjük a módushoz tartozó frekvenciáit és annak hibáját. A következő módusokra az $n=6$ esettel bezárólag ugyanezekkel a lépésekkel mérjük a frekvenciákat és azoknak a hibáját. Miután ezt a mérést befejeztük a vastag kötelet a vékogyra cseréljük, és annak a végére $50g$ tömegű súlyt helyezünk. Emellett a súly mellett megkeressük az $n=3$ módushoz tartozó frekvenciát, és azt leírjuk. Ezután a frekvenciát eltekerjük, és ismét megkeressük az $n=3$-hoz tartozót, majd ezt harmadjára is megtesszük. Miután van károm mért frekvencia, amely az $n=3$ módushoz tartozik a kötél végén lévő súly tömegét megnöveljük $20g$-al, és ismét 3 különböző mérést végzünk az $n=3$ módus frekvenciájának meghatározásához, majd ismét növeljük a tömeget $20g$-al. Ezt $170g$-os tömeggel bezárólag tovább ismételjük.
+\section*{Mérési adatok}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|}
+        \hline
+        Félhullámhosszok száma & Módushoz tartozó frekvencia $(Hz)$ & Frekvencia hibája$(Hz)$ \\
+        \hline
+        2 & 13.1 & 0.2 \\
+        \hline
+        3 & 18.8 & 0.1 \\
+        \hline
+        4 & 24.9 & 0.2 \\
+        \hline
+        5 & 31.7 & 0.1 \\
+        \hline
+        6 & 37.2 & 0.1 \\
+        \hline
+    \end{tabular}
+    \caption{Az egyes módusokhoz tartozó frekvenciák, és hibáik a vastag kötélen $0.09kg$ tömeg mellett.}
+\end{table}
+A kötél hossza: $L=1.532m$.
+A nehézségi gyorsulás mértéke: $g=9.81\frac{m}{s^2}$.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|}
+        \hline
+        $m(kg)$ & $L(m)$ \\
+        \hline
+        0.0008 & 4 \\ 
+        \hline
+    \end{tabular}
+    \caption{A referencia kötél tömege és hossza.}
+\end{table}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|r|r|}
+        \hline
+        \multirow[c]{2}{*}{Tömeg$(g)$} & \multicolumn{4}{|c|}{Frekvencia$(Hz)$} \\
+        \cline{2-5}
+        & 1. & 2. & 3. & Átlag \\
+        \hline
+        0.05 & 43.6 & 44.1 & 43.9 & 43.87 \\
+        \hline
+        0.07 & 50.9 & 50.1 & 49.9 & 50.30 \\
+        \hline
+        0.09 & 57.2 & 57.0 & 57.4 & 57.20 \\
+        \hline
+        0.11 & 64.8 & 64.7 & 64.9 & 64.80 \\
+        \hline
+        0.13 & 71.8 & 69.6 & 70.6 & 70.67 \\
+        \hline
+        0.15 & 78.2 & 77.5 & 78.4 & 78.03 \\
+        \hline
+        0.17 & 84.8 & 83.5 & 85.5 & 84.60 \\
+        \hline
+    \end{tabular}
+    \caption{Az $n=3$ módushoz tartozó frekvenciák a vékony kötélen különböző tömegek mellett.}
+\end{table}
+\section*{Hibaforrások}
+\begin{enumerate}
+    \item{A kötél hosszának mérésekor a mérőszalag végének pontos beállítása a csiga tengelyéhez.}
+    \item{A mérőszalag pontosságából származó hiba.}
+    \item{Az adott módus frekvenciája és az közeli frekvenciáknál nehéz látni az állóhullám változását, így nehéz pontosan a megfelelő frekvenciát rögzíteni.}
+    \item{Magas frekvenciák mellett nehéz pontosan megállapítani az adott módusok helyét.}
+    \item{A frekvencia léptetésének a skálájából származó hiba.}
+\end{enumerate}
+\section*{A mérés kiértékelése}
+\subsection*{Terjedési sebesség és frekvenciák arányának meghatározása}
+A kötél a mérési elrendezésben tekinthető egy megfeszített húrnak, az ezen a húron kialakuló állóhullámok frekvenciáját és hullámhosszát a következő képletek írják le:
+\begin{eqnarray*}
+    f_n=\frac{v}{\lambda_{n}} \\
+    \lambda_{n}=\frac{2L}{n} \\
+\end{eqnarray*}
+Ahol $L$ a kötél rezgő részének a hossza, $f_n$ az $n.$ módushoz tartozó frekvencia, $\lambda_n$ az $n.$ módushoz tartozó hullámhossz és $v$ a hullám terjedési sebessége. Ezekből a hullám terjedés sebessége pedig:
+\begin{equation*}
+    v=f_n\cdot\lambda_n=\frac{2Lf_n}{n}. 
+\end{equation*}
+Ebből a különböző mért adatokból külön-külön kiszámított terjedési sebességek:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|}
+        \hline
+        $n$ & $v\left(\frac{m}{s}\right)$ \\
+        \hline
+        2 & 20.07 \\
+        \hline
+        3 & 19.20 \\
+        \hline
+        4 & 19.07 \\
+        \hline
+        5 & 19.43 \\
+        \hline
+        6 & 19.00 \\
+        \hline
+    \end{tabular}
+    \caption{Számolt terjedési sebesség a különböző módusok mellet mért adatokból.}
+\end{table}
+Azt várnánk, hogy a sebességek megegyezzenek, ám ez nem történik meg, azonban az eltérés nem olyan nagy, hogy azt ne lehessen megmagyarázni a mérés hibaáival, az egyetlen igazán kiugró adat az $n=2$- höz tartozó sebesség, de még ez is csak nagyjából 5\%-al tér el a többitől.\newline 
+
+
+Két szomszédos módus között a frekvenciák arány a következőnek adódik a fenti képletekből:
+\begin{equation*}
+    \frac{f_{n+1}}{f_{n}}=\frac{\frac{2L}{n+1}}{\frac{2L}{n}}=\frac{n+1}{n}
+\end{equation*}
+Ebből az egymást követő módusokhoz tartozó frekvencai arány:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|}
+        \hline
+        $n$ & Mért $\frac{f_{n+1}}{f_n}$ arány & Várt $\frac{f_{n+1}}{f_n} arány$ \\
+        \hline
+        2 & 1.435 & 1.50 \\
+        \hline
+        3 & 1.324 & 1.33 \\
+        \hline
+        4 & 1.273 & 1.25 \\
+        \hline
+        5 & 1.173 & 1.20 \\
+        \hline
+    \end{tabular}
+    \caption{A frekvenciák mért és várt aránya.}
+\end{table}
+Itt is látható, hogy a mérés során kapott adatokból számolt értékek jó közelítéssel visszaadják a vártakat, a legnagyobb eltésés szintén az $n=2$ esetben lép fel a sebességhez hasonlóan, amelyből arra következtethetünk, hogy az a frekvencia aránylag pontatlanul lett mérve.
+\subsection*{A terjedési sebesség anyagi minőségtől való függése}
+A rugalmas húron a hullám terjedési sebessége:
+\begin{equation*}
+    v=\sqrt{\frac{F}{\rho A}}=\sqrt{\frac{F}{\mu}}.
+\end{equation*}
+Ahol $F$ a fonalat feszítő erő, jelen esetben $F=mg$ ahol $g$ a nehézségi gyorsulás és $m$ a fonál végére akasztott súly tömege, $\rho$ a kötél sűrűsége, $A$ a keresztetszete és $\mu$ a kötél hosszmenti sűrűsége. Ezt az összefüggést az előző mérési feladatrészben kapott képletekbe helyettesítve a következő összefüggésre juthatunk:
+\begin{equation*}
+    f^2=\frac{n^2g}{4L^2\mu}m.
+\end{equation*}
+Erre illesszünk $y=ax+b$ egyenletű egyenest, ahol $y=f^2$, $x=m$ és $a=\frac{n^2g}{4L^2\mu}$. Az egyenes paramétereire a következő adatok adódtak: $a=43819s^{-2}kg^{-1}$, $b=-510.78s^{-2}$. A meredekség hibáját a téglalap módszerrel határozzuk meg. Legyen $y_{ill}$ az illesztett egyenes egyenletéből kapott érték $y$-ra az egyes $x$ pontokban, és $\Delta y=y-y_{ill}$. Ezek az adatok a tömegek függvényében a következők:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|r|}
+        \hline
+        $x(kg)$ & $y(s^{-2})$ & $y_{ill}(s^{-2})$ & $\Delta y(s^{-2})$ \\
+        \hline
+        0.05 & 1924.28 & 1680.19 & 244.10 \\
+        \hline
+        0.07 & 2530.09 & 2556.57 & -26.48 \\
+        \hline
+        0.09 & 3271.84 & 3432.96 & -161.12 \\
+        \hline
+        0.11 & 4199.04 & 4309.34 & -110.30 \\
+        \hline
+        0.13 & 4993.78 & 5185.73 & -191.95 \\
+        \hline
+        0.15 & 6089.20 & 6062.11 & 27.09 \\
+        \hline
+        0.17 & 7157.16 & 6938.50 & 218.66 \\
+        \hline
+    \end{tabular}
+    \caption{$y$, $y_{ill}$ és $\Delta y$ értékei a mérés során használt tömegek mellett.}
+\end{table}
+\begin{equation*}
+    \Delta a = 2\frac{\left|\Delta y\right|_{max}}{x_{max}-x_{min}}=2*\frac{244.10}{0.17 - 0.05}=2034.16s^{-2}kg^{-1}
+\end{equation*}
+Ez a hiba jelentős, $\delta a = \frac{\Delta a}{a}=0.046$-nak adódik, amely közel 5\%. \newline
+
+
+Az $f^2$-re fent felírt összefüggésből $\mu$-re a következő összefüggést kapjuk:
+\begin{equation*}
+    \mu=\frac{n^2g}{4L^2a}
+\end{equation*}
+Jelen esetben az összes mérést $n=3$ módus mellet végeztük el, a kötél azon hossza, amely rezegni tud megegyezzik a mérés első felében mért hosszal, így $\mu$ értékét kiszámíthatjuk,\newline $\mu=\frac{9\cdot 9,81}{4\cdot 1.532^2\cdot 43819}=2.146\cdot 10^{-4}kg\cdot m^{-1}$ értéket kapunk, a hibáját hibaterjedéssel számíthatjuk ki: $\delta \frac{1}{a}=\delta a$, tehát $\Delta \mu=\mu\cdot\delta a=2.146\cdot 10^{-4}\cdot0.046=9.87\cdot10^{-6}kg\cdot m^{-1}$.\newline 
+
+
+Ellenőrzés képpen a referencia kötél hosszmenti sűrűségét is meghatározhatjuk: $\mu_{ref}=\frac{m_{ref}}{L_{ref}}=\frac{0.0008}{4}=2.00\cdot10^{-4}$.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        $\mu(kg\cdot m^{-1})$ & $\mu_{ref}(kg\cdot m^{-1})$ \\
+        \hline
+        $2.146\cdot10^{-4}\pm9.87\cdot10^{-6}$ & $2.00\cdot10^{-4}$ \\
+        \hline
+    \end{tabular}
+    \caption{$\mu$ és $\mu_{ref}$ értékeinek összehasonlítása.}
+\end{table}
+Látható, hogy habár a két érték nem tér el nagyon egymástól mégis van közöttök egy nagyjából 7\%-os hiba, amelyte feltehetőleg a mérés során kapott adatok hibái okoztak.
+\section*{Diszkusszió}
+A konstans feszítőerő mellett végzett mérés során sikeresen igazoltuk a hullám egyes módusai között várt frekvencia arányt megadó képletet, és azt is sikerült belátni, hogy a vártaknak megfelelően a hullám terjedési sebessége nem fog függeni a frekvencia nagyságától. Emellett sikeresen meg lett határozva a vékogyabbik kötél lineáris sűrűsége, amely nem tér el nagy mértékben a referencia kötél adataiból számolt értéktől. A kiértékelés során tapasztalt a várt értékektől való eltérést pedig feltehetőleg első sorban a mérés során elkövetett hibákból származó pontatlanság adja.
+\end{document}
+
+%rúd téglalap
