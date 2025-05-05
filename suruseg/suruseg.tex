@@ -1,0 +1,223 @@
+\documentclass[10pt,pdftex]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{indentfirst}
+\usepackage[a4paper]{geometry}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{float}
+\usepackage{spverbatim}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\definecolor{titlebg}{RGB}{128,128,128}
+
+\usepackage{lmodern}
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+
+\renewcommand{\thesection}{\arabic{section}}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+
+\title{Szilárd testek sűrűségének mérése}
+
+%% EZ ALÁBBI KÉT MEZŐT ÉRTELEMSZERŰEN KI KELL TÖLTENI
+\author{Bíró Gergő Tamás}
+\date{2025. április 29.}
+
+
+%% FEJLÉC LEÍRÓ, NEM KELL MÓDOSÍTANI
+\renewcommand*{\maketitle}{\noindent{%
+\parbox{\dimexpr\linewidth-2\fboxsep}{\color{black}%
+\parbox{\linewidth}{\fontsize{18}{24}\selectfont\sffamily\bfseries\thetitle}%
+}}\vskip 1em%
+\begin{tabular}{l}%
+Mérést végezte: \theauthor \\%
+Mérés dátuma: \thedate\\
+Jegyzőkönyv végleges változata: \today \\%
+Jegyzőkönyv leadásának időpontja: 2025. május 6.
+\end{tabular}%
+}
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\section*{Mérés célja}
+A mérés során a megadott anyagok sűrűségét akarjuk meghatározni, először a Mohr-Westphal mérleg seegítségével, majd az anyagokokból rendelkezésre álló minták méretének, és tömegének közvetlen mérésével. Az utóbbi módszer esetében a kapott érték hibáját is meghatározzuk, amely a mérőeszközök hibájából származik. A kapott sűrűségértékeket összehasonlítjuk a különböző módszerek esetén, valamint az irodalmi adatokkal, ennek segítségével megpróbáljuk azonosítani a vizsgált testek anyagait.
+\section*{Mérőeszközök}
+\begin{itemize}
+    \item{Tolómérő}
+    \item{Csavarmikrométer}
+    \item{Mérleg}
+    \item{Mohr-Westphal mérleg}
+    \item{Súlyok}
+    \item{Lovasok}
+    \item{Merülő és súlytányér}
+    \item{Vízzel teli főzőpohár}
+\end{itemize}
+\section*{A mérés leírása}
+Először meg kell győződnünk arról, hogy a Mohr-Westphal mérleg egyensúlyban van, amikor egyedül a súlytányéron van egy 20g-os súly. Amennyiben ez teljesül a 20g-os súlyt levesszük a tányérról, arra az egyik mintát ráhelyezzük, mellé annyi súlyt helyezünk, amennyinek a hatására a mérleg újra egyensúlyba kerül, ekkor a mérlegen lévő egyes tömegű súlyok számát feljegyezzük. Ezután a súlytányérról levesszük a kis henger alakú mintát, amelyet a merülőtányérra átteszünk, eközben a súlyokat nem távolítjuk el. A minta áthelyezése után a lovasokat a mérleg karán úgy helyezzük el, hogy az ismét egyensúlyba kerüljön, majd azoknak a pozíciójait is rögzítjük. A sűrűség közvetlen meghatározása során a nagy henger alakú mintának a sugarát és magasságát mérjük meg csavarmikrométer segítségével, a két téglatestnek pedig az oldalhosszait mérjük tolómérővel. Ezen kívül mindhárom test tömegét is megmérjük mérleggel. A mért adatok mellett a mérőeszközök hibáját is feljegyezzük, amelyek segítségével a kapott sűrűség értékek hibáját is meg fogjuk becsülni.
+\section*{Mérési adatok}
+\subsection*{Közvetlen mérés}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|r|}
+        \hline
+        & $d$\footnotemark$(m)$ & $h$\footnotemark$(m)$ & $m$\footnotemark$(kg)$ \\
+        \hline
+        Henger & 0.01882 & 0.01627 & 0.0125 \\
+        \hline
+    \end{tabular}
+    \caption{A minta henger paraméterei.}
+\end{table}
+\footnotetext[1]{A henger sugara.}
+\footnotetext[2]{A henger magassága.}
+\footnotetext[3]{A test tömege.}
+\noindent $\Delta x$\footnote[4]{A hosszmérés hibája.}$=5\cdot10^{-6}m$\\
+\noindent $\Delta m$\footnote[5]{A tömegmérés hibája.}$=5\cdot10^{-5}kg$
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|r|r|}
+        \hline
+        & 1. oldal hossza$(m)$ & 2. oldal hossza$(m)$ & 3. oldal hossza$(m)$ & $m(kg)$ \\
+        \hline
+        1. Hasáb & 0.01295 & 0.03100 & 0.01575 & 0.0508 \\
+        \hline
+        2. Hasáb & 0.01605 & 0.01555 & 0.02865 & 0.0637 \\
+        \hline
+    \end{tabular}
+    \caption{A minta hasábok paraméterei.}
+\end{table}
+\noindent $\Delta x=2.5\cdot10^{-5}m$\\
+\noindent $\Delta m=5\cdot10^{-5}kg$
+\subsection*{Mérés a Mohr-Westphal mérleggel}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|}
+        \hline
+        \multirow{2}{*}{Minták} & \multicolumn{9}{|c|}{Tömegek$(kg)$} & \multirow{2}{*}{Össztömeg$(kg)$} \\
+        \cline{2-10}
+        & 0.01 & 0.005 & 0.002 & 0.001 & 0.0005 & 0.0002 & 0.0001 & 0.00005 & 0.00001 & \\
+        \hline
+        1.Henger\footnotemark[6] & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0.015 \\
+        \hline
+        2.Henger\footnotemark[7] & 0 & 1 & 1 & 1 & 1 & 0 & 1 & 0 & 2 & 0.00862 \\
+        \hline
+        3.Henger\footnotemark[8] & 0 & 1 & 0 & 1 & 0 & 0 & 1 & 0 & 1 & 0.00611 \\
+        \hline
+    \end{tabular}
+    \caption{Az egyes testek esetében a melléjük helyezett súlyok száma tömegenként, amikor a mérleg egyensúlyban volt.}
+\end{table}
+\footnotetext[6]{A minta henger anyagával azonos anyagú kis henger.}
+\footnotetext[7]{Az 1. minta hasáb anyagával azonos anyagú kis henger.}
+\footnotetext[8]{Az 2. minta hasáb anyagával azonos anyagú kis henger.}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|r|}
+        \hline
+        \multirow{2}{*}{Minták} & \multicolumn{3}{|c|}{Lovasok pozíciói} \\
+        \cline{2-4}
+        & Nagy & Közepes & Kicsi \\
+        \hline
+        1. Henger & 1 & 8 & - \\
+        \hline
+        2. Henger & 1 & 4 & 6 \\
+        \hline
+        3. Henger & 1 & 5 & 7 \\
+        \hline
+    \end{tabular}
+    \caption{A lovasok pozíciója az egyes testek esetében amikor a mérlegy egyensúlyban van.}
+\end{table}
+A nehézségi gyorsulás értékét $g=9.81\frac{m}{s^2}$-nek tekintjük, a víz sűrűségét pedig $998.23\frac{kg}{m^3}$-nak. 
+\section*{Hibaforrások}
+\begin{enumerate}
+    \item{Tolómérő pontosságából származó hiba.}
+    \item{Csavarmikrométer pontosságából származó hiba.}
+    \item{Mérleg pontosságából származó hiba.}
+    \item{Megfelelően kicsi súlyok hiányából.}
+    \item{A livasok távolságát nem lehet folytonosan változtatni, így abból is származni fog egy hiba, hogy nem feltétlenül lesz tökéletes egyensúlyban a mérleg.}
+    \item{A víz sűrűségét nem a teremben lévő pontos körülményekhez tartozó értékkéknek tekintjük.}
+\end{enumerate}
+\section*{A mérés kiértékelése}
+\subsection*{A sűrűség kiszámítása közvetlen méréssel}
+A nagy henger esetében $V=\pi\left(\frac{d}{2}\right)^2h$, ahol $d$ a henger átmérője, $h$ a magassága, $V$ pedig a test térfogata. Ebből az 1. ki henger anyagával megegyező nagy henger sűrűsége:
+\begin{equation*}
+    \varrho_1=\frac{m}{\pi\left(\frac{d}{2}\right)^2h}=\frac{0.0125}{\pi\left(\frac{0.01882}{2}\right)^2\cdot0.01627}=2761.8\frac{kg}{m^3}.
+\end{equation*}
+Ahol $\varrho$ a test sűrűsége.
+Ennek a hibáját a következő képlet adja meg:
+\begin{eqnarray*}
+    \Delta \varrho_1=\delta\varrho_1\cdot\varrho_1=\left(\delta m +\delta V\right)\varrho_1=\left(\delta m + \pi\frac{\delta h + 2 \delta d}{4}\right)\varrho_1=\left(\frac{\Delta m}{m}+\pi\frac{\frac{\Delta h}{h} + 2\frac{\Delta d}{d}}{4}\right)\varrho_1=\\=\left(\frac{5\cdot10^{-5}}{0.0125} + \pi\frac{\frac{5\cdot10^{-6}}{0.01627} + 2\frac{5\cdot10^{-6}}{0.01882}}{4}\right)2761.8=12.87\frac{kg}{m^3}.
+\end{eqnarray*}
+A hasáboknál $V=abc$, ahol $a$, $b$ és $c$ az egyes oldalak hosszai, így az 1. hasáb sűrűsége, melynak anyaga a 2. kis henger anyagábval egyezik meg:
+\begin{equation*}
+    \varrho_2=\frac{m}{abc}=\frac{0.0508}{0.01295\cdot0.03100\cdot0.01575}=8034.4\frac{kg}{m^3}.
+\end{equation*}
+Ennek a hibája:
+\begin{eqnarray*}
+    \Delta \varrho_2=\delta \varrho_2\cdot\varrho_2=\left(\delta m + \delta V\right)\varrho_2=\left(\delta m+\delta a+\delta b+\delta c\right)\varrho_2=\left(\frac{\Delta m}{m}+\frac{\Delta a}{a}+\frac{\Delta b}{b}+\frac{\Delta c}{c}\right)\varrho_2=\\=\left(\frac{5\cdot10^{-5}}{0.0508}+\frac{2.5\cdot10^{-5}}{0.01295}+\frac{2.5\cdot10^{-5}}{0.03100}+\frac{2.5\cdot10^{-5}}{0.01575}\right)8034.4=29.9\frac{kg}{m^3}.
+\end{eqnarray*}
+A második hasábnál, amely anyaga a 3. kis hengerével egyezik meg:
+\begin{equation*}
+    \varrho_3=\frac{m}{abc}=\frac{0.0637}{0.01605\cdot0.01555\cdot0.02865}=8908.6\frac{kg}{m^3}.
+\end{equation*}
+Ennek a hibája:
+\begin{eqnarray*}
+    \Delta \varrho_3=\delta \varrho_3\cdot\varrho_3=\left(\delta m + \delta V\right)\varrho_3=\left(\delta m+\delta a+\delta b+\delta c\right)\varrho_3=\left(\frac{\Delta m}{m}+\frac{\Delta a}{a}+\frac{\Delta b}{b}+\frac{\Delta c}{c}\right)\varrho_3=\\=\left(\frac{5\cdot10^{-5}}{0.0637}+\frac{2.5\cdot10^{-5}}{0.01605}+\frac{2.5\cdot10^{-5}}{0.01555}+\frac{2.5\cdot10^{-5}}{0.02865}\right)8908.6=42,97\frac{kg}{m^3}.
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Sűrűség mérése a Mohr-Westphal mérleggel}
+Mivel a mérleg 0.02$kg$ súly mellett van egyensúlyban, így $m_{test}=0.02-\sum m$,  ahol $m_{test}$ a mért kis henger tömege, $\sum m $ pedig a mellé helyezett súlyok össztömege. A lovasokkal a mérlegre kifejtett forgatónyomatékkal a víz által a testre ható felhajtóerőt kompenzáljuk, tehát:
+\begin{equation*}
+    Gn_1k+\frac{1}{10}Gn_2k+\frac{1}{100}Gn_3k=F_{fel}10k
+\end{equation*}
+vagyis
+\begin{equation*}
+    \frac{1}{10}Gn_1+\frac{1}{100}Gn_2+\frac{1}{1000}Gn_3=F_{fel}
+\end{equation*}
+Itt $k$ a mérleg karán elhelyezkedő két jelölés közötti táv, $n$-ek at adják meg, hogy az adott lovas a mérleg karán hányadik jelölésnél van fellógatva, $G$ a nagy lovas súlya, amely megegyezik 10$ml$ $20^\circ C$-s víz súlyával, vagyis $G=10^{-5}g\varrho_{víz}=0.0979N$, $F_{fel}$ a felhajtóerő, vagyis $F_{fel}=\varrho{víz}gV_{test}$, ahol $V_{test}$ a vizsgált kis henger térfogata. Így 
+\begin{equation*}
+    \frac{1}{10g\varrho_{víz}}Gn_1+\frac{1}{100g\varrho_{víz}}Gn_2+\frac{1}{1000g\varrho_{víz}}Gn_3=V_{test}
+\end{equation*}
+A fenti képletekből a mérési adatainkkal a következő értékek adódnak:\\
+
+
+Az 1. kis henger esetén: $m_{test}= 0.02-0.015=0.005kg$, $V_{test}=1\frac{1}{10g\varrho_{víz}}G+8\frac{1}{100g\varrho_{víz}}G=1.7995\cdot10^{-6}m^3$ Ebből pedig $\varrho_1=\frac{m_{test}}{v_{test}}=\frac{0.005}{1.7995\cdot10^{-6}}=2778.5\frac{kg}{m^3}$\\
+
+
+
+Az 2. kis henger esetén: $m_{test}= 0.02-0.00862=0.01138kg$, $V_{test}=1\frac{1}{10g\varrho_{víz}}G+4\frac{1}{100g\varrho_{víz}}G+6\frac{6}{1000g\varrho_{víz}}G=1.4596\cdot10^{-6}m^3$ Ebből pedig $\varrho_2=\frac{m_{test}}{v_{test}}=\frac{0.01138}{1.4596\cdot10^{-6}}=7796.6\frac{kg}{m^3}$\\
+
+
+Az 3. kis henger esetén: $m_{test}= 0.02-0.00611=0.01389kg$, $V_{test}=1\frac{1}{10g\varrho_{víz}}G+5\frac{1}{100g\varrho_{víz}}G+7\frac{6}{1000g\varrho_{víz}}G=1.5696\cdot10^{-6}m^3$ Ebből pedig $\varrho_3=\frac{m_{test}}{v_{test}}=\frac{0.01389}{1.5696\cdot10^{-6}}=8849.5\frac{kg}{m^3}$
+\section*{Eredmények}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|r|r|r|r|r|r|}
+        \hline
+        Anyag száma & Anyag színe & Feltételezett anyag & $\varrho_{közvetlen}$\footnotemark[9]$\left(\frac{kg}{m^3}\right)$ & $\varrho_{M.-W.}$\footnotemark[10]$\left(\frac{kg}{m^3}\right)$ & $\varrho_{táblázat}$\footnotemark[11]$\left(\frac{kg}{m^3}\right)$ \\
+        \hline
+        1. & világosszürke & Alumínium & $2761.8\pm12.87$ & 2778.5 & 2700 \\
+        \hline
+        2. & sötétszürke & Vas & $8034.4\pm29.9$ & 7796.6 & 7870 \\
+        \hline
+        3. & vörös & Réz & $8908.6\pm42,97$ & 8849.5 & 8930 \\
+        \hline
+    \end{tabular}
+    \caption{Az egyes mintákra mért sűrűségek, valamint a feltételezett anyaguk sűrűsége.}
+\end{table}
+\footnotetext[9]{A közvetlen mérés során kapott sűrűségérték.}
+\footnotetext[10]{A Mohr-Westphal mérleggel végzett mérés során kapott sűrűségérték.}
+\footnotetext[11]{Az adott anyagnak a függvénytáblázatban szereplő sűrűségértéke.}
+\section*{Diszkusszió}
+A mérés során sikerült meghatározni mindét módszerrel az anyagok sűrűségét, azoknak az értéke egymáshoz képest nem mutatott jelentős eltérést a 2. kis mintahenger anyagát leszámítva. A kapott sűrűségek és az anyagok színe alapján feltételeztük, hogy az 1. minta anyaga alumínium, a 2-é vas a 3-é pedig réz, amelyek elég jó feltételezések, mivel a mért sűrűségek csak néhány százalékkal térnek el az irodalmi adatoktól.
+\includepdf[pages={1}]{./adatlap.pdf}
+\end{document}
+%rúd téglalap
